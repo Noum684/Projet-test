@@ -1,0 +1,18 @@
+<div class="org-create-container">
+  <mat-card>
+    <h2>Créer une organisation</h2>
+    <form [formGroup]="orgForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Créer</button>
+    </form>
+  </mat-card>
+</div>

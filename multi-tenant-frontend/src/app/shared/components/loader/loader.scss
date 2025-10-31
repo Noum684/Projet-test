@@ -1,0 +1,19 @@
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 8px;
+
+  mat-spinner {
+    color: var(--primary-color);
+  }
+
+  .msg {
+    margin-top: 4px;
+    font-size: 0.95rem;
+    color: var(--text-color);
+  }
+}

@@ -1,0 +1,15 @@
+<mat-toolbar class="app-header" color="primary">
+  <button mat-icon-button (click)="onToggle()" aria-label="Toggle menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="brand">Project Manager</span>
+
+  <span class="spacer"></span>
+
+  <div class="user">
+    <mat-icon>account_circle</mat-icon>
+    <span class="email" *ngIf="userEmail">{{ userEmail }}</span>
+    <button mat-button (click)="logout()">Se déconnecter</button>
+  </div>
+</mat-toolbar>

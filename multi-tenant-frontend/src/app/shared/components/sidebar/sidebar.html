@@ -1,0 +1,26 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+    <mat-nav-list>
+      <mat-list-item (click)="navigate('/organisations')">
+        <mat-icon matListIcon>business</mat-icon>
+        <span matLine>Organisations</span>
+      </mat-list-item>
+
+      <mat-list-item (click)="navigate('/projets')">
+        <mat-icon matListIcon>folder</mat-icon>
+        <span matLine>Projets</span>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item (click)="navigate('/settings')">
+        <mat-icon matListIcon>settings</mat-icon>
+        <span matLine>Paramètres</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

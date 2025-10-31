@@ -1,0 +1,53 @@
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  color: var(--text-color);
+  box-shadow: var(--shadow-light);
+  height: 64px;
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    color: var(--primary-color);
+  }
+
+  .brand {
+    font-weight: 600;
+    margin-left: 12px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-dark);
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 16px;
+
+    .email {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    button {
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      transition: background 0.3s;
+
+      &:hover {
+        background: var(--primary-dark);
+      }
+    }
+  }
+}
