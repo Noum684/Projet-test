@@ -1,1 +1,23 @@
-<p>liste works!</p>
+<div class="page-header">
+    <h2>Projet</h2>
+    <button mat-raised-button color="primary"
+    (click)="goCreate()">Créer un projet</button>
+</div>
+
+<div class="card-grid">
+    <mat-card *ngFor="let p of projets" class="projet-card">
+        <div class="card-top">
+            <div class="title">{{p.title}}</div>
+            <div class="meta">{{p.createdAt|date:'short'}}</div>
+        </div>
+        <div class="description">{{p.description||'- Aucune description -'}}</div> 
+        <div class="card-actions">
+            <!-- <button mat-stroked-button class="edit" (click)="router.navigate(['/projets', p.id])">
+                <mat-icon>edit</mat-icon>
+            </button> -->
+            <button mat-icon-button color="war" (click)="deleteProjet(p.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </mat-card>
+</div>
