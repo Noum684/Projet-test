@@ -49,7 +49,7 @@ export class Login {
         this.isLoading = false;
         // Enregistre le token dans le localStorage
         localStorage.setItem('token', response.access_token);
-        this.router.navigate(['/organisations']);
+        this.router.navigate(['/dashboard/organisations']);
       },
       error: (err) => {
         this.isLoading = false;

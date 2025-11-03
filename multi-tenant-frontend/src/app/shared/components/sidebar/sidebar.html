@@ -1,12 +1,19 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+
+    <!-- <mat-list-item (click)="navigate('/dashboard')">
+        <mat-icon matListIcon>home</mat-icon>
+        <span matLine>Projet Manager</span>
+      </mat-list-item> -->
+
+    <mat-divider></mat-divider>
     <mat-nav-list>
-      <mat-list-item (click)="navigate('/organisations')">
+      <mat-list-item (click)="navigate('/dashboard/organisations/liste')">
         <mat-icon matListIcon>business</mat-icon>
         <span matLine>Organisations</span>
       </mat-list-item>
 
-      <mat-list-item (click)="navigate('/projets')">
+      <mat-list-item (click)="navigate('/dashboard/projets/liste')">
         <mat-icon matListIcon>folder</mat-icon>
         <span matLine>Projets</span>
       </mat-list-item>

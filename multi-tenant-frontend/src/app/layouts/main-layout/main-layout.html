@@ -1,9 +1,9 @@
 <div class="app-layout">
-  <app-sidebar [opened]="sidenavOpened" class="sidebar"></app-sidebar>
-
+   <app-navbar (menuToggle)="toggleSidenav()" (logoutClick)="logout()"></app-navbar> 
+    
   <div class="main-content">
-    <app-navbar (menuToggle)="toggleSidenav()" (logoutClick)="logout()"></app-navbar> 
-    <main class="content-area">
+    <app-sidebar [opened]="sidenavOpened" class="sidebar"></app-sidebar>
+   <main class="content-area">
         <app-loader *ngIf="isLoading"></app-loader>
       <router-outlet></router-outlet>
     </main>

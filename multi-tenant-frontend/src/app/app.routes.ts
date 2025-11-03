@@ -4,7 +4,7 @@ import { MainLayout } from './layouts/main-layout/main-layout';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'auth',
     loadChildren: () =>
       import('./auth/auth-module').then((m) => m.AuthModule),
   },
